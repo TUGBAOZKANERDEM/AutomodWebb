@@ -13,6 +13,7 @@ import java.time.Duration;
 public class Hooks {
     @Before()
     public void before_ui(){
+        Driver.getDriver().get("https://plan.atoumod.fr/fr/");
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         Driver.getDriver().manage().window().maximize();
     }
@@ -29,8 +30,6 @@ public class Hooks {
 
             Driver.closeDriver(); // Burasi tarayici kapatir
         }
-
-
 
 
     }
